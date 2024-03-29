@@ -1,0 +1,65 @@
+SECTION-1
+-------------
+Q.1)What is Node.js, and how does it differ from traditional server-side technologies like PHP or Java?
+
+NodeJS is an environment not a technology. 
+If we consider as a language then 
+    i)It uses JavaScript for server-side programming, while traditional technologies like PHP or Java use their respective languages (PHP or Java).
+    ii)It is very easy(in comparison with Java & PHP) for frontend developers to switch from client side technologies to server side.
+    iii)It is single threaded and also synchronous in nature.
+
+Q.2)Explain the concept of event-driven programming in Node.js and provide an example.
+
+In node js something or action is performed when an event is emmited.
+Just like handling file reads asynchronously with fs module. Event triggers when file read completes.
+
+Q.3)Describe the purpose of the package.json file in a Node.js project.
+
+It is used to keep track and record of the libraries used to develop the project. It also helps to run the appication using adding the dependancies 
+in different machines.
+
+Q.4) What is callback hell, and how can it be mitigated in Node.js applications?
+
+Callback hell comes from nested callbacks, because of this  the code becomes unreadable. To overcome this issue we can use Promise concepts or async/await.
+
+Q.5)What is npm, and why is it commonly used in Node.js projects?
+
+NPM is a package managing tool of NodeJS which is used to install/uninstall dependencies.
+
+
+
+
+SECTION-3
+-------------
+Explain how you would handle file storage and organization on the server.
+
+I used a third-party library("multer") to store file. Here I stored my file in a local static folder called "upload" on the base directory(parallel to application folder).
+
+
+
+
+SECTION-4
+-------------
+Q.4)Describe how you would securely store user passwords in a database.
+
+I created a hash for the password using a third-party library called "bcryptjs" before storing them in the database.
+
+
+
+
+SECTION-5
+-------------
+Q.1)Define the concept of authorization in the context of a Node.js application.
+In our application we keep something to be restricted for some of the users  and only done by super/admin 
+for those we use authorization.
+
+Q.3)Provide an example of how you would check and enforce authorization in your routes.
+First I checked the user has the given server side token or not. If the request contains the token then only I proceed
+After extracting userId from token I cheked the role w.r.t id from User collection if the user has proper
+role to do I did or else I send him a error result.
+
+
+
+
+
+I took 3 to 3:30 hours to complete all of these.
